@@ -1,0 +1,17 @@
+INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:56:31] "GET / HTTP/1.1" 200 -
+INFO:app:2021-08-21T19:56:57.322343 Article 2020 CNCF Annual Report retrived!
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:56:57] "GET /1 HTTP/1.1" 200 -
+INFO:app:2021-08-21T19:57:05.500350 About Us page accessed
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:57:05] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:57:11] "GET /create HTTP/1.1" 200 -
+INFO:app:2021-08-21T19:57:20.143863 Article new created!
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:57:20] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:57:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:57:28] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:57:32] "GET /healthz HTTP/1.1" 200 -
+INFO:app:2021-08-21T19:57:44.339579 Post Not Found
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:57:44] "GET /8 HTTP/1.1" 404 -
+INFO:app:2021-08-21T19:57:51.067428 About Us page accessed
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:57:51] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Aug/2021 19:57:53] "GET / HTTP/1.1" 200 -

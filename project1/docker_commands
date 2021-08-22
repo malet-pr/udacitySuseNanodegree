@@ -1,0 +1,32 @@
+## Docker commands used to build the application 
+docker build -t techtrends .
+
+## Docker commands used to run the application
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+docker logs b367ca3783d0
+
+## Logs from the container running the TechTrends application
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+2021-08-22 02:26:49,783 [INFO]  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-08-22 02:26:49,785 [INFO]  * Restarting with stat
+2021-08-22 02:26:50,079 [WARNING]  * Debugger is active!
+2021-08-22 02:26:50,081 [INFO]  * Debugger PIN: 240-176-730
+2021-08-22 02:27:23,179 [INFO] 172.17.0.1 - - [22/Aug/2021 02:27:23] "GET / HTTP/1.1" 200 -
+2021-08-22 02:27:28,705 [INFO]  Article 2020 CNCF Annual Report retrived!
+2021-08-22 02:27:28,715 [INFO] 172.17.0.1 - - [22/Aug/2021 02:27:28] "GET /1 HTTP/1.1" 200 -
+2021-08-22 02:27:41,741 [ERROR]  Post Not Found
+2021-08-22 02:27:41,749 [INFO] 172.17.0.1 - - [22/Aug/2021 02:27:41] "GET /10 HTTP/1.1" 404 -
+2021-08-22 02:27:44,359 [INFO]  About Us page accessed
+2021-08-22 02:27:44,368 [INFO] 172.17.0.1 - - [22/Aug/2021 02:27:44] "GET /about HTTP/1.1" 200 -
+2021-08-22 02:27:46,414 [INFO] 172.17.0.1 - - [22/Aug/2021 02:27:46] "GET /create HTTP/1.1" 200 -
+2021-08-22 02:28:05,008 [INFO]  Article A new post created!
+2021-08-22 02:28:05,011 [INFO] 172.17.0.1 - - [22/Aug/2021 02:28:05] "POST /create HTTP/1.1" 302 -
+2021-08-22 02:28:05,024 [INFO] 172.17.0.1 - - [22/Aug/2021 02:28:05] "GET / HTTP/1.1" 200 -
+2021-08-22 02:28:11,879 [INFO] 172.17.0.1 - - [22/Aug/2021 02:28:11] "GET /metrics HTTP/1.1" 200 -
+2021-08-22 02:28:21,286 [INFO] 172.17.0.1 - - [22/Aug/2021 02:28:21] "GET /healthz HTTP/1.1" 200 - 
