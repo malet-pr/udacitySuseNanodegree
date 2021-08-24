@@ -32,4 +32,4 @@ jobs:
           file: ./project1/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: maletq/udacity_suse_project1/techtrends:latest
+          tags: maletq/techtrends:latest
