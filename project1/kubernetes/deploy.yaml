@@ -15,7 +15,7 @@ spec:
     spec:        
       containers:
        -  name: techtrend
-          image: maletq/techtrends
+          image: maletq/techtrends:latest
           resources:
             limits: 
               cpu: 500m 

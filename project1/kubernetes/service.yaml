@@ -9,7 +9,7 @@ spec:
     protocol: TCP
     targetPort: 3111
   externalIPs:
-    - 80.11.12.10  
+    - 80.11.12.10
   selector:
     app: techtrends
   type: ClusterIP
