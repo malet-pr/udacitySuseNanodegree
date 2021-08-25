@@ -1,2 +1,2 @@
 # udacitySuseNanodegree
-Projects from the Cloud Native Architecture Nanodegree, part of the Udacity-Suse scholarship
+Projects from the Cloud Native Architecture Nanodegree (Udacity-Suse Scholarship)
