@@ -1,0 +1,17 @@
+namespace:
+  name: prod
+image:
+  repository: maletq/techtrends
+  tag: v1.0.0
+  image pullPolicy: Always
+service:
+  port: 7111  
+replicaCount: 5
+resources:
+  requests:
+    cpu: 350m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
+

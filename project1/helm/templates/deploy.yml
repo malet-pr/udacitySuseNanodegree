@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: techtrends
+  namespace: {{ .Values.namespace.name }} 
+spec:
+  replicas: {{ .Values.replicaCount }} 
+  selector:
+    matchLabels:
+      app: techtrends  
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template: 
+    metadata:
+        labels:
+          app: techtrends
+    spec:        
+      containers:
+       -  name: techtrend
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          pullPolicy: {{ .Values.pullPolicy }} 
+          resources:
+            limits: 
+              cpu: {{ .Values.limits.cpu }} 
+              memory: {{ .Values.limits.memory }} 
+            requests: 
+              cpu: {{ .Values.requests.cpu }} 
+              memory: {{ .Values.requests.memory }} 
+          ports:
+            - containerPort: {{ .Values.ports.containerPort }} 
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: {{ .Values.ports.containerPort }} 
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: {{ .Values.ports.containerPort }} 
