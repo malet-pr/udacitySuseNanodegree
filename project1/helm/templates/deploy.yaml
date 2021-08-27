@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: techtrends
   namespace: {{ .Values.namespace.name }} 
 spec:
   replicas: {{ .Values.replicaCount }} 
@@ -21,7 +20,7 @@ spec:
     - name: techtrend
       image: {{ .Values.image.repository }}
       tag: {{ .Values.image.tag }}
-      pullPolicy: {{ .Values.image.pullPolicy }} 
+      pullPolicy: {{ .Values.pullPolicy }} 
       resources:
         limits: 
           cpu: {{ .Values.limits.cpu }} 
