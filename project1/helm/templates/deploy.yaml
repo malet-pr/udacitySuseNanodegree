@@ -1,21 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: techtrends
   namespace: {{ .Values.namespace.name }} 
 spec:
   replicas: {{ .Values.replicaCount }} 
-  selector:
-    matchLabels:
-      app: techtrends  
   strategy:
     rollingUpdate:
       maxSurge: 25%
       maxUnavailable: 25%
     type: RollingUpdate
   template: 
-    metadata:
-        labels:
-          app: techtrends
     spec:     
       container:
         - name: techtrend
