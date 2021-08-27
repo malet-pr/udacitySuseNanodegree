@@ -17,25 +17,25 @@ spec:
     metadata:
         labels:
           app: techtrends
-    spec:        
-      containers:
-       -  name: techtrend
-          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-          pullPolicy: {{ .Values.pullPolicy }} 
-          resources:
-            limits: 
-              cpu: {{ .Values.limits.cpu }} 
-              memory: {{ .Values.limits.memory }} 
-            requests: 
-              cpu: {{ .Values.requests.cpu }} 
-              memory: {{ .Values.requests.memory }} 
-          ports:
-            - containerPort: {{ .Values.ports.containerPort }} 
-          livenessProbe:
-            httpGet:
-              path: /healthz
-              port: {{ .Values.ports.containerPort }} 
-          readinessProbe:
-            httpGet:
-              path: /healthz
-              port: {{ .Values.ports.containerPort }} 
+    spec:     
+    - name: techtrend
+      image: {{ .Values.image.repository }}
+      tag: {{ .Values.image.tag }}
+      pullPolicy: {{ .Values.image.pullPolicy }} 
+      resources:
+        limits: 
+          cpu: {{ .Values.limits.cpu }} 
+          memory: {{ .Values.limits.memory }} 
+        requests: 
+          cpu: {{ .Values.requests.cpu }} 
+          memory: {{ .Values.requests.memory }} 
+      ports:
+        - containerPort: {{ .Values.ports.containerPort }} 
+      livenessProbe:
+        httpGet:
+          path: /healthz
+          port: {{ .Values.ports.containerPort }} 
+      readinessProbe:
+        httpGet:
+          path: /healthz
+          port: {{ .Values.ports.containerPort }} 
