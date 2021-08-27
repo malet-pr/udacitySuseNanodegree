@@ -13,5 +13,5 @@ spec:
       valueFiles:
       - values-staging.yaml 
     path: project1/helm
-    repoURL: https://raw.githubusercontent.com/malet-pr/udacitySuseNanodegree/main
-    targetRevision: HEAD
+    repoURL: https://raw.githubusercontent.com/malet-pr/udacitySuseNanodegree
+    targetRevision: main

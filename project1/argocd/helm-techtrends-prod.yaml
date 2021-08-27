@@ -13,6 +13,6 @@ spec:
       valueFiles:
       - values-prod.yaml 
     path: project1/helm
-    repoURL: https://github.com/malet-pr/udacitySuseNanodegree/tree/main
-    targetRevision: HEAD
+    repoURL: https://github.com/malet-pr/udacitySuseNanodegree
+    targetRevision: main
 
