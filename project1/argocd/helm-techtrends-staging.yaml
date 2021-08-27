@@ -12,6 +12,6 @@ spec:
     helm:
       valueFiles:
       - values-staging.yaml 
-    path: /argocd
-    repoURL: https://raw.githubusercontent.com/malet-pr/udacitySuseNanodegree/main/project1
+    path: project1/helm
+    repoURL: https://raw.githubusercontent.com/malet-pr/udacitySuseNanodegree/main
     targetRevision: HEAD

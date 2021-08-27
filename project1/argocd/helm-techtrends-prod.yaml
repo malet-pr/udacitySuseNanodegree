@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
       - values-prod.yaml 
-    path: /argocd
-    repoURL: https://github.com/malet-pr/udacitySuseNanodegree/tree/main/project1
+    path: project1/helm
+    repoURL: https://github.com/malet-pr/udacitySuseNanodegree/tree/main
     targetRevision: HEAD
 
