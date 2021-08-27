@@ -23,11 +23,11 @@ spec:
       pullPolicy: {{ .Values.pullPolicy }} 
       resources:
         limits: 
-          cpu: {{ .Values.limits.cpu }} 
-          memory: {{ .Values.limits.memory }} 
+          cpu: {{ .Values.resources.limits.cpu }} 
+          memory: {{ .Values.resources.limits.memory }} 
         requests: 
-          cpu: {{ .Values.requests.cpu }} 
-          memory: {{ .Values.requests.memory }} 
+          cpu: {{ .Values.resources.requests.cpu }} 
+          memory: {{ .Values.resources.requests.memory }} 
       ports:
         - containerPort: {{ .Values.ports.containerPort }} 
       livenessProbe:
