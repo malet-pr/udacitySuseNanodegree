@@ -10,7 +10,7 @@ spec:
   source:
     helm:
       valueFiles:
-      - values-prod.yaml 
+      - Values-prod.yaml 
     path: project1/helm
     repoURL: https://github.com/malet-pr/udacitySuseNanodegree
     targetRevision: HEAD
