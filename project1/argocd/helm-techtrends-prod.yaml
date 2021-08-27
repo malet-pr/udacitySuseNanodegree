@@ -13,6 +13,6 @@ spec:
       valueFiles:
       - values-prod.yaml 
     path: project1/argocd/
-    repoURL: https://github.com/malet-pr/udacitySuseNanodegree
+    repoURL: https://github.com/malet-pr/udacitySuseNanodegree/tree/main/
     targetRevision: HEAD
 
