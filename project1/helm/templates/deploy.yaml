@@ -29,7 +29,7 @@ spec:
           cpu: {{ .Values.resources.requests.cpu }} 
           memory: {{ .Values.resources.requests.memory }} 
       ports:
-        containerPort: {{ .Values.containerPort }} 
+        - containerPort: {{ .Values.containerPort }} 
       livenessProbe:
         httpGet:
           path: /healthz
