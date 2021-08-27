@@ -6,8 +6,8 @@ metadata:
 spec:
   ports:
   - port: {{ .Values.service.port }} 
-    protocol: {{ .Values.service.protocol }} 
+    protocol: TCP
     targetPort:  {{ .Values.service.targetPort }} 
   selector:
     app: techtrends
-  type: {{ .Values.service.type }} 
+  type: ClusterIP 
