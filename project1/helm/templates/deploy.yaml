@@ -20,7 +20,7 @@ spec:
     - name: techtrend
       image: {{ .Values.image.repository }}
       tag: {{ .Values.image.tag }}
-      pullPolicy: {{ .Values.pullPolicy }} 
+      pullPolicy: {{ .Values.image.pullPolicy }} 
       resources:
         limits: 
           cpu: {{ .Values.resources.limits.cpu }} 
