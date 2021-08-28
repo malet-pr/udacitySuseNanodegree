@@ -23,7 +23,7 @@ spec:
       containers:
         - name: techtrends
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-          pullPolicy: {{ .Values.image.pullPolicy }} 
+          imagePullPolicy: {{ .Values.image.pullPolicy }} 
           resources:
             limits: 
               cpu: {{ .Values.resources.limits.cpu }} 
