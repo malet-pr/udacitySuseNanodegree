@@ -6,7 +6,8 @@ metadata:
 spec:
   replicas: {{ .Values.replicaCount }} 
   selector:
-    app: {{ .Values.namespace.label }} 
+    matchLabels:
+      app: techtrends-staging
   strategy:
     rollingUpdate:
       maxSurge: 25%
