@@ -21,7 +21,8 @@ spec:
         app: techtrends
     spec:     
       containers:
-        - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        - name: techtrends
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           pullPolicy: {{ .Values.image.pullPolicy }} 
           resources:
             limits: 
