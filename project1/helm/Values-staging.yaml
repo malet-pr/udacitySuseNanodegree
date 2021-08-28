@@ -1,10 +1,15 @@
 namespace:
+  label: techtrends
   name: staging
 image:
   repository: maletq/techtrends
   tag: latest
+  pullPolicy: IfNotPresent
 service:
   port: 5111  
+  targetPort: 3111
+  protocol: TCP
+  type: ClusterIP 
 replicaCount: 3
 resources:
   requests:

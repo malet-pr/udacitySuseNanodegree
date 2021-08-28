@@ -1,11 +1,15 @@
 namespace:
+  label: techtrends
   name: prod
 image:
   repository: maletq/techtrends
   tag: latest
   pullPolicy: Always
 service:
-  port: 7111  
+  port: 7111 
+  targetPort: 3111
+  protocol: TCP
+  type: ClusterIP  
 replicaCount: 5
 resources:
   requests:
