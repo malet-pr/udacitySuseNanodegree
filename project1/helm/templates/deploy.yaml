@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: techtrends
+  name: {{ .Values.namespace.label }} 
   namespace: {{ .Values.namespace.name }} 
 spec:
   replicas: {{ .Values.replicaCount }} 
   selector:
     matchlabels:
-      app: techtrends
+      app: {{ .Values.namespace.label }} 
   strategy:
     rollingUpdate:
       maxSurge: 25%

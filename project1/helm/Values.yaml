@@ -1,5 +1,5 @@
 namespace:
-  label: techtrends-sandbox
+  label: techtrends
   name: sandbox
 image:
   repository: maletq/techtrends
