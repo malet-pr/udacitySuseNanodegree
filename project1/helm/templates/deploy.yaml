@@ -6,7 +6,7 @@ metadata:
 spec:
   replicas: {{ .Values.replicaCount }} 
   selector:
-    matchlabels:
+    matchLabels:
       app: {{ .Values.namespace.label }} 
   strategy:
     rollingUpdate:
@@ -16,8 +16,7 @@ spec:
   template: 
     spec:     
       containers:
-        - image: {{ .Values.image.repository }}
-          tag: {{ .Values.image.tag }}
+        - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           pullPolicy: {{ .Values.image.pullPolicy }} 
           resources:
             limits: 
