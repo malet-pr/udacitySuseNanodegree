@@ -9,5 +9,3 @@ spec:
     protocol: {{ .Values.service.protocol }} 
     targetPort:  {{ .Values.service.targetPort }} 
   type: {{ .Values.service.type }} 
-  selector:
-    app: {{ .Values.namespace.label }}
