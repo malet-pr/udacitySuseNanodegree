@@ -3,7 +3,7 @@ namespace:
   name: staging
 image:
   repository: maletq/techtrends
-  tag: v1.0.0
+  tag: latest
 service:
   port: 5111  
 replicaCount: 3
