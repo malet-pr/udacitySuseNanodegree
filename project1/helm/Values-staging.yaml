@@ -1,5 +1,5 @@
 namespace:
-  abel: techtrends-staging
+  label: techtrends-staging
   name: staging
 image:
   repository: maletq/techtrends
