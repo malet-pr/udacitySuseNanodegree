@@ -1,4 +1,5 @@
 namespace:
+  label: techtrends-prod
   name: prod
 image:
   repository: maletq/techtrends
