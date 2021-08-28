@@ -5,9 +5,6 @@ metadata:
   namespace: {{ .Values.namespace.name }} 
 spec:
   replicas: {{ .Values.replicaCount }} 
-  selector:
-    matchLabels:
-      app: {{ .Values.namespace.label }} 
   strategy:
     rollingUpdate:
       maxSurge: 25%
