@@ -16,8 +16,7 @@ spec:
   template: 
     spec:     
       containers:
-        - name: techtrend
-          image: {{ .Values.image.repository }}
+        - image: {{ .Values.image.repository }}
           tag: {{ .Values.image.tag }}
           pullPolicy: {{ .Values.image.pullPolicy }} 
           resources:
