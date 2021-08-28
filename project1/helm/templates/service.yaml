@@ -4,6 +4,8 @@ metadata:
   name: {{ .Values.namespace.label }} 
   namespace: {{ .Values.namespace.name }} 
 spec:
+  selector:
+    app: {{ .Values.namespace.label }} 
   ports:
   - port: {{ .Values.service.port }} 
     protocol: {{ .Values.service.protocol }} 
