@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    app: techtrends
   name: techtrends
   namespace: {{ .Values.namespace.name }} 
 spec:
@@ -14,10 +16,12 @@ spec:
       maxUnavailable: 25%
     type: RollingUpdate
   template: 
+    metadata:
+      labels:
+        app: techtrends
     spec:     
       containers:
-        - name: techtrends
-          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           pullPolicy: {{ .Values.image.pullPolicy }} 
           resources:
             limits: 
