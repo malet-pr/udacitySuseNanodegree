@@ -1,5 +1,4 @@
 namespace:
-  label: techtrends-prod
   name: prod
 image:
   repository: maletq/techtrends
@@ -24,4 +23,5 @@ readinessProbe:
   httpGet:
     path: /healthz
     port: 3111
+
 
