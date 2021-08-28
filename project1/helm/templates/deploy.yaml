@@ -5,6 +5,9 @@ metadata:
   namespace: {{ .Values.namespace.name }} 
 spec:
   replicas: {{ .Values.replicaCount }} 
+  selector:
+    matchlabels:
+      app: techtrends
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -12,7 +15,7 @@ spec:
     type: RollingUpdate
   template: 
     spec:     
-      container:
+      containers:
         - name: techtrend
           image: {{ .Values.image.repository }}
           tag: {{ .Values.image.tag }}
